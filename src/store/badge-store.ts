@@ -22,7 +22,7 @@ export const useBadgeStore = create(
     persist<StateProps>((set) => ({
         data: null,
         save: (badge: BadgeStore) => set(() => ({ data: badge })),
-        remove: () => set(() => ({ data: null })),
+        remove: () => set((data) => ({ data: { ...data.data!, checkInURL: "" } })),
         updateAvatar: (uri: string) => set((data) => ({
             data: { ...data.data!, image: uri }
         })),
