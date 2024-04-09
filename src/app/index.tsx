@@ -3,7 +3,7 @@ import { Input } from '../components/input'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { colors } from '../styles/colors'
 import { Button } from '../components/button'
-import { Link, Redirect, router } from 'expo-router'
+import { Link, Redirect } from 'expo-router'
 import { useState } from 'react'
 import { api } from '@/server/api'
 import { useBadgeStore } from '@/store/badge-store'
@@ -26,7 +26,7 @@ export default function Home() {
 
             const { data } = await api.get(`/attendees/${code}/badge`)
 
-            badgeStore.save(data.badge)
+            badgeStore.save({ ...data.badge, image: badgeStore.data?.image ?? undefined })
 
         } catch (err) {
             console.log(err)
