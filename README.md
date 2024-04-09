@@ -32,7 +32,7 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 Vá para a pasta em que você clonou o projeto, abra o terminal e execute os comandos:
 - 01 - npm install (Esse comando instalará todas as dependências do projeto)
 - 02 - npm run dev
-- 
+
 ## 📽️ Demonstração
 https://github.com/ArthurFakhouri/NLW-Unite-mobile-React-Native/assets/71707151/b1263bfc-d8ca-4af8-acd1-0b787241ccaa
 
